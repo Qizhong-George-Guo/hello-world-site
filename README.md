@@ -1,2 +1,2 @@
 # hello-world-site
-Gemini trial website 
+Trial website 
