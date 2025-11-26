@@ -2,81 +2,152 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>GGBS – Green–Grey–Blue–Smart Infrastructure</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="GGBS – a professional hub for green–grey–blue–smart infrastructure, flood resilience, and urban water management." />
+  
+  <title>GGBS – Green–Grey–Blue–Smart Infrastructure</title>
+  <meta name="description" content="GGBS.AI – A professional hub for resilient coastal engineering, flood management, and smart infrastructure systems." />
+  
+  <meta property="og:title" content="GGBS – Green–Grey–Blue–Smart Infrastructure" />
+  <meta property="og:description" content="Integrating civil engineering, nature-based solutions, and AI for resilient water systems." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.ggbs.ai" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --primary-color: #0f4c81; /* Classic Blue */
+      --accent-color: #48c774;  /* Nature Green hint */
+      --text-dark: #1e293b;
+      --text-light: #64748b;
+      --bg-color: #f8fafc;
+    }
+
+    html {
+      scroll-behavior: smooth; /* Smooth gliding when clicking nav links */
+    }
+
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
       margin: 0;
-      background: #f5f7fb;
-      color: #1f2933;
-      line-height: 1.6;
+      background: var(--bg-color);
+      color: var(--text-dark);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
     }
+
+    /* HEADER STYLES */
     header {
-      background: #0b3d91;
+      background: linear-gradient(135deg, #0b3d91 0%, #1e5799 100%);
       color: white;
-      padding: 1.5rem 1.5rem;
+      padding: 3rem 1.5rem;
+      text-align: center;
     }
+
     header h1 {
       margin: 0;
-      font-size: 1.8rem;
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
     }
+
     header p {
-      margin: 0.4rem 0 0;
-      font-size: 0.95rem;
-      max-width: 720px;
+      margin: 1rem auto 0;
+      font-size: 1.1rem;
+      max-width: 700px;
+      color: #e2e8f0;
+      font-weight: 300;
     }
+
+    /* NAVIGATION */
     nav {
-      margin-top: 0.75rem;
-      font-size: 0.9rem;
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
     }
+
     nav a {
-      color: #dde9ff;
+      color: white;
       text-decoration: none;
-      margin-right: 1.25rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      transition: background 0.3s ease;
     }
+
     nav a:hover {
-      text-decoration: underline;
+      background: rgba(255, 255, 255, 0.25);
+      text-decoration: none;
     }
+
+    /* MAIN LAYOUT */
     main {
-      max-width: 900px;
-      margin: 1.5rem auto;
-      padding: 0 1.25rem 2.5rem;
+      max-width: 850px;
+      margin: -2rem auto 2rem; /* Pulls content slightly over the header */
+      padding: 0 1.25rem;
+      position: relative;
     }
+
+    /* CARD STYLES */
     .card {
       background: white;
-      border-radius: 10px;
-      padding: 1.5rem 1.75rem;
-      margin-bottom: 1rem;
-      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      border: 1px solid #f1f5f9;
     }
+
     .card h2 {
       margin-top: 0;
-      font-size: 1.25rem;
-      border-bottom: 1px solid #e0e7ff;
-      padding-bottom: 0.4rem;
-      margin-bottom: 0.8rem;
+      font-size: 1.5rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      display: inline-block;
+      border-bottom: 2px solid #e0e7ff;
     }
+
+    /* LIST STYLES */
     ul {
-      margin-top: 0.4rem;
       padding-left: 1.2rem;
+      color: var(--text-dark);
     }
+    
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* FOOTER */
     footer {
       text-align: center;
-      font-size: 0.8rem;
-      color: #6b7280;
-      padding: 1.5rem 1rem 2rem;
+      font-size: 0.85rem;
+      color: var(--text-light);
+      padding: 2rem 1rem 3rem;
+      border-top: 1px solid #e2e8f0;
+      margin-top: 2rem;
+    }
+    
+    /* MOBILE TWEAKS */
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.75rem; }
+      nav { gap: 0.5rem; }
+      main { margin-top: 1.5rem; } /* Reset overlap on mobile */
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>GGBS – Green–Grey–Blue–Smart Infrastructure</h1>
+    <h1>GGBS.AI</h1>
     <p>
-      A professional hub for science-based, system-oriented approaches to flood resilience,
-      stormwater management, and sustainable urban and coastal infrastructure.
+      Green · Grey · Blue · Smart Infrastructure<br>
+      <span style="font-size: 0.9em; opacity: 0.9;">Integrating nature, engineering, and data for coastal & urban resilience.</span>
     </p>
     <nav>
       <a href="#about">About</a>
@@ -88,52 +159,49 @@
 
   <main>
     <section id="about" class="card">
-      <h2>About GGBS</h2>
+      <h2>About the Framework</h2>
       <p>
-        GGBS (Green–Grey–Blue–Smart) Infrastructure is an integrated framework that combines
-        traditional civil engineering (“grey”) with nature-based solutions (“green” and “blue”)
-        and data/AI-enabled “smart” systems.
+        <strong>GGBS</strong> (Green–Grey–Blue–Smart) is an integrated framework designed to address the complexities of modern water management. It bridges the gap between traditional civil engineering (“grey”), nature-based solutions (“green” and “blue”), and data-enabled (“smart”) monitoring systems.
       </p>
       <p>
-        This site will gradually evolve into a platform to share concepts, case studies,
-        teaching materials, and research highlights on resilient and sustainable water
-        and infrastructure systems.
+        This platform serves as a hub for concepts, case studies, and research highlights focused on resilient sustainable water and infrastructure systems.
       </p>
     </section>
 
     <section id="vision" class="card">
-      <h2>Vision</h2>
+      <h2>Our Vision</h2>
       <p>
-        The GGBS vision is to advance:
+        To advance the resilience of coastal and urban environments through:
       </p>
       <ul>
-        <li>Scientifically rigorous understanding of urban and coastal water systems.</li>
-        <li>Practical engineering solutions for flood risk reduction and water quality improvement.</li>
-        <li>Integrative planning that aligns engineering, ecology, and communities.</li>
-        <li>Smart monitoring and decision-support tools, including data analytics and AI.</li>
+        <li><strong>Scientific Rigor:</strong> Deepening the understanding of hydrodynamics in complex environments.</li>
+        <li><strong>Practical Solutions:</strong> Engineering flood risk reduction strategies that work in the real world.</li>
+        <li><strong>Integrative Planning:</strong> Aligning hard infrastructure with ecological needs and community values.</li>
+        <li><strong>Intelligent Systems:</strong> Utilizing AI and real-time data analytics for smarter decision-making.</li>
       </ul>
     </section>
 
     <section id="themes" class="card">
       <h2>Key Themes</h2>
       <ul>
-        <li>Green stormwater infrastructure and sponge city concepts.</li>
+        <li>Green stormwater infrastructure & sponge city concepts.</li>
         <li>Urban and coastal flood resilience.</li>
         <li>Integrated watershed and coastal management.</li>
-        <li>Coupling grey structures with nature-based solutions.</li>
+        <li>Coupling grey structures (breakwaters, levees) with nature-based solutions (reefs, wetlands).</li>
         <li>Data, modelling, and intelligent control for water systems.</li>
       </ul>
-      <p style="margin-top:0.4rem;">
-        Future updates may include lecture notes, illustrative case studies, and interactive simulations.
+      <p style="margin-top:1rem; font-size: 0.9rem; color: #64748b; font-style: italic;">
+        *Future updates will include lecture notes, illustrative case studies, and interactive simulations.*
       </p>
     </section>
 
     <section id="contact" class="card">
       <h2>Contact</h2>
       <p>
-        This site is under active development. For now, you may already know how to reach
-        the author through professional or academic channels. A dedicated GGBS email contact and
-        newsletter will be added here in future updates.
+        GGBS.AI is currently under active development. 
+      </p>
+      <p>
+        A dedicated contact channel and newsletter subscription will be available shortly. For immediate inquiries, please refer to existing academic or professional channels.
       </p>
     </section>
   </main>
@@ -143,7 +211,6 @@
   </footer>
 
   <script>
-    // Set the year in the footer automatically
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
