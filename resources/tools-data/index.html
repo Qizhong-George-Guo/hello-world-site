@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tools, Models & Data – GGBS Resources</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="description"
+        content="Tools, models, datasets, calculators, and utilities that support the GGBS Framework — covering hydrology, hydraulics, coasts, watersheds, and smart systems." />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --bg: #f5f7fa;
+      --bg-alt: #ffffff;
+      --text: #111827;
+      --muted: #4b5563;
+      --accent: #2563eb;
+      --accent-soft: #dbeafe;
+      --border: #e5e7eb;
+      --max-width: 960px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      color: var(--text);
+      background-color: var(--bg);
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      background-color: var(--bg-alt);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-shell {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    nav { display: flex; gap: 1rem; flex-wrap: wrap; }
+    nav a { font-size: 0.9rem; color: var(--muted); }
+    nav a.active { color: var(--accent); font-weight: 600; }
+
+    .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.03em;
+      display: flex; align-items: baseline; gap: 0.4rem;
+    }
+    .brand span:last-child {
+      font-weight: 500; font-size: 0.85rem; color: var(--muted);
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 3rem;
+    }
+
+    .breadcrumbs {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .breadcrumbs a { color: var(--muted); }
+    .breadcrumbs span { margin: 0 0.25rem; }
+
+    .hero-eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.8rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-title {
+      font-size: clamp(1.8rem, 3.5vw, 2.2rem);
+      line-height: 1.25;
+      margin: 0 0 0.75rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 42rem;
+      margin: 0 0 1.2rem;
+    }
+
+    .section {
+      margin-top: 2rem;
+      background-color: var(--bg-alt);
+      border-radius: 0.75rem;
+      border: 1px solid var(--border);
+      padding: 1.5rem 1.5rem 1.75rem;
+    }
+
+    .section h2 {
+      font-size: 1.3rem;
+      margin-top: 0;
+      margin-bottom: 0.8rem;
+    }
+
+    .subheading {
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      font-size: 1.05rem;
+    }
+
+    .item-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .item {
+      margin-bottom: 1.1rem;
+      padding-bottom: 0.9rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .item-title {
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+
+    .item-meta {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.3rem;
+    }
+
+    .item-links a {
+      margin-right: 0.7rem;
+      font-size: 0.9rem;
+    }
+
+    .tag-row {
+      margin-top: 0.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      background-color: var(--accent-soft);
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+      white-space: nowrap;
+    }
+
+    .note-box {
+      margin-top: 1rem;
+      padding: 0.75rem 0.9rem;
+      border-radius: 0.6rem;
+      background-color: #eff6ff;
+      border: 1px solid #bfdbfe;
+      font-size: 0.9rem;
+      color: #1e3a8a;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      background-color: var(--bg-alt);
+      margin-top: 1rem;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1rem 1.25rem 1.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="nav-shell">
+    <div class="brand">
+      <span>GGBS</span>
+      <span>Green–Grey–Blue–Smart Infrastructure</span>
+    </div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/framework/">Framework</a>
+      <a href="/applications/">Applications</a>
+      <a href="/resources/" class="active">Resources</a>
+      <a href="/founder/">Founder</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="breadcrumbs">
+    <a href="/">Home</a> ›
+    <a href="/resources/">Resources</a> ›
+    <span>Tools, Models &amp; Data</span>
+  </div>
+
+  <section>
+    <div class="hero-eyebrow">Resources</div>
+    <h1 class="hero-title">Tools, Models &amp; Data</h1>
+    <p class="hero-subtitle">
+      Selected computational tools, calculators, datasets, scripts, and modeling
+      resources that support GGBS work in hydrology, hydraulics, coasts,
+      watersheds, and smart systems.  
+      Items below are placeholders — replace them with your actual files or links.
+    </p>
+  </section>
+
+  <!-- ============================================================= -->
+  <!-- CALCULATORS & SIMPLE UTILITIES -->
+  <!-- ============================================================= -->
+
+  <section class="section">
+    <div class="subheading">Calculators &amp; Simple Tools</div>
+
+    <ul class="item-list">
+
+      <li class="item">
+        <div class="item-title">Runoff Curve Number Calculator</div>
+        <div class="item-meta">
+          A simple utility for estimating runoff depth from design storms using
+          NRCS curve numbers and initial abstraction assumptions.
+        </div>
+        <div class="item-links">
+          <a href="#">Calculator (HTML/JS)</a>
+          <a href="#">GitHub Code</a>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Hydrology</span>
+          <span class="tag">Runoff</span>
+        </div>
+      </li>
+
+      <li class="item">
+        <div class="item-title">Wave Parameter Calculator</div>
+        <div class="item-meta">
+          Computes deep-water wavelength, shoaling coefficient, refraction, and
+          breaking conditions for coastal engineering examples.
+        </div>
+        <div class="item-links">
+          <a href="#">Calculator</a>
+          <a href="#">GitHub</a>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Coastal</span>
+          <span class="tag">Waves</span>
+        </div>
+      </li>
+
+      <li class="item">
+        <div class="item-title">Green Infrastructure Sizing Tool</div>
+        <div class="item-meta">
+          Estimates bioretention, green roof, and permeable pavement sizing for
+          specific design storms and hydrologic conditions.
+        </div>
+        <div class="item-links">
+          <a href="#">Prototype</a>
+          <a href="#">GitHub</a>
+        </div>
+        <div class="tag-row">
+          <span class="tag">GI</span>
+          <span class="tag">Design</span>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+  <!-- ============================================================= -->
+  <!-- DATASETS -->
+  <!-- ============================================================= -->
+
+  <section class="section">
+    <div class="subheading">Datasets</div>
+
+    <ul class="item-list">
+
+      <li class="item">
+        <div class="item-title">Zhenjiang Sponge City Monitoring Dataset</div>
+        <div class="item-meta">
+          Rainfall–runoff, groundwater, and water quality datasets for multiple
+          GI installations across several years (placeholder).
+        </div>
+        <div class="item-links">
+          <a href="#">Download (ZIP)</a>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Sponge City</span>
+          <span class="tag">Monitoring</span>
+        </div>
+      </li>
+
+      <li class="item">
+        <div class="item-title">Urban Rainfall–Runoff Experimental Data</div>
+        <div class="item-meta">
+          Flume and rainfall-simulator data from permeable pavement and green roof
+          experiments (placeholder).
+        </div>
+        <div class="item-links">
+          <a href="#">Download</a>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Runoff</span>
+          <span class="tag">Experiments</span>
+        </div>
+      </li>
+
+      <li class="item">
+        <div class="item-title">Coastal Storm Surge and Wave Dataset</div>
+        <div class="item-meta">
+          Example surge–wave model outputs for teaching storm-flood processes
+          (placeholder).
+        </div>
+        <div class="item-links">
+          <a href="#">Download</a>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Coastal</span>
+          <span class="tag">Surge</span>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+  <!-- ============================================================= -->
+  <!-- MODELING RESOURCES -->
+  <!-- ============================================================= -->
+
+  <section class="section">
+    <div class="subheading">Hydrologic, Hydraulic &amp; Coastal Models</div>
+
+    <ul class="item-list">
+
+      <li class="item">
+        <div class="item-title">Stormwater Hydrology Model Templates</div>
+        <div class="item-meta">
+          Basic SWMM/HMS model templates for small urban catchments, suitable for
+          class exercises (placeholder).
+        </div>
+        <div class="item-links">
+          <a href="#">Download</a>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Hydrology</span>
+          <span class="tag">SWMM</span>
+        </div>
+      </li>
+
+      <li class="item">
+        <div class="item-title">2D Flood Model Setup (CityCAT/HEC-RAS)</div>
+        <div class="item-meta">
+          Example 2D meshes, boundary conditions, and sample simulations for
+          teaching flood modeling (placeholder).
+        </div>
+        <div class="item-links">
+          <a href="#">Download</a>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Flood</span>
+          <span class="tag">2D modeling</span>
+        </div>
+      </li>
+
+      <li class="item">
+        <div class="item-title">Coastal Wave &amp; Surge Model Templates</div>
+        <div class="item-meta">
+          Example setups for WAVEWATCH, SWAN, ADCIRC-style inputs (placeholder).
+        </div>
+        <div class="item-links">
+          <a href="#">Download</a>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Coastal</span>
+          <span class="tag">Waves &amp; surge</span>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+  <!-- ============================================================= -->
+  <!-- CODE SNIPPETS & SCRIPTS -->
+  <!-- ============================================================= -->
+
+  <section class="section">
+    <div class="subheading">Scripts &amp; Code Snippets</div>
+
+    <ul class="item-list">
+
+      <li class="item">
+        <div class="item-title">Rainfall–Runoff Calculation Script (Python)</div>
+        <div class="item-meta">
+          Script demonstrating rainfall loss, excess runoff, and hydrograph
+          generation using simplified methods.
+        </div>
+        <div class="item-links">
+          <a href="#">GitHub</a>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Python</span>
+          <span class="tag">Hydrology</span>
+        </div>
+      </li>
+
+      <li class="item">
+        <div class="item-title">Sediment Transport Example (MATLAB/Python)</div>
+        <div class="item-meta">
+          Sample script for calculating longshore sediment transport using CERC
+          and Kamphuis formulas (placeholder).
+        </div>
+        <div class="item-links">
+          <a href="#">GitHub</a>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Sediment</span>
+          <span class="tag">Coastal</span>
+        </div>
+      </li>
+
+      <li class="item">
+        <div class="item-title">GIS Workflow Templates</div>
+        <div class="item-meta">
+          Example ArcGIS/QGIS workflows for watershed delineation, raster
+          processing, DEM cleaning, etc.
+        </div>
+        <div class="item-links">
+          <a href="#">GitHub</a>
+        </div>
+        <div class="tag-row">
+          <span class="tag">GIS</span>
+          <span class="tag">Watersheds</span>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+  <section class="note-box">
+    To activate these resources, upload your calculators, scripts, datasets,
+    and model files to your GitHub repository (for example under
+    <code>/tools/</code> or <code>/data/</code>) and replace the
+    <code>href="#”</code> placeholders above with the correct file paths or
+    external links.  
+    Each tool or dataset will then have a stable URL on <strong>GGBS.ai</strong>.
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>© 2025 GGBS – Green–Grey–Blue–Smart Infrastructure Framework</div>
+    <div>Hosted on GitHub Pages</div>
+  </div>
+</footer>
+
+</body>
+</html>
