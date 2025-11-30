@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Coasts & Shorelines – GGBS Applications</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="description"
+        content="Coastal applications of the GGBS Framework – integrating beaches, dunes, wetlands, grey structures, and smart tools to manage waves, storm surge, sediment, and sea-level rise." />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --bg: #f5f7fa;
+      --bg-alt: #ffffff;
+      --text: #111827;
+      --muted: #4b5563;
+      --accent: #2563eb;
+      --accent-soft: #dbeafe;
+      --border: #e5e7eb;
+      --max-width: 960px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      color: var(--text);
+      background-color: var(--bg);
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      background-color: var(--bg-alt);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-shell {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    nav { display: flex; gap: 1rem; flex-wrap: wrap; }
+    nav a { font-size: 0.9rem; color: var(--muted); }
+    nav a.active { color: var(--accent); font-weight: 600; }
+
+    .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.03em;
+      display: flex; align-items: baseline; gap: 0.4rem;
+    }
+    .brand span:last-child {
+      font-weight: 500; font-size: 0.85rem; color: var(--muted);
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 3rem;
+    }
+
+    .breadcrumbs {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+    .breadcrumbs a { color: var(--muted); }
+    .breadcrumbs span { margin: 0 0.25rem; }
+
+    .hero-eyebrow {
+      text-transform: uppercase;
+      letter-letter-spacing: 0.12em;
+      font-size: 0.8rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-title {
+      font-size: clamp(1.8rem, 3.5vw, 2.2rem);
+      line-height: 1.25;
+      margin: 0 0 0.75rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 40rem;
+      margin: 0 0 1.2rem;
+    }
+
+    .subnav {
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .subnav a { margin-right: 0.75rem; }
+
+    .section {
+      margin-top: 2rem;
+      background-color: var(--bg-alt);
+      border-radius: 0.75rem;
+      border: 1px solid var(--border);
+      padding: 1.5rem 1.5rem 1.75rem;
+    }
+
+    .section h2 {
+      font-size: 1.35rem;
