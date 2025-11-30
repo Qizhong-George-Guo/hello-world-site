@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Flood Risk & Resilience – GGBS Applications</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="description"
+        content="Flood risk and resilience applications of the GGBS Framework – integrating pluvial, fluvial, and coastal flooding with green, grey, blue, and smart infrastructure strategies." />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --bg: #f5f7fa;
+      --bg-alt: #ffffff;
+      --text: #111827;
+      --muted: #4b5563;
+      --accent: #2563eb;
+      --accent-soft: #dbeafe;
+      --border: #e5e7eb;
+      --max-width: 960px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      color: var(--text);
+      background-color: var(--bg);
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      background-color: var(--bg-alt);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-shell {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    nav { display: flex; gap: 1rem; flex-wrap: wrap; }
+    nav a { font-size: 0.9rem; color: var(--muted); }
+    nav a.active { color: var(--accent); font-weight: 600; }
+
+    .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.03em;
+      display: flex; align-items: baseline; gap: 0.4rem;
+    }
+    .brand span:last-child {
+      font-weight: 500; font-size: 0.85rem; color: var(--muted);
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 3rem;
+    }
+
+    .breadcrumbs {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+    .breadcrumbs a { color: var(--muted); }
+    .breadcrumbs span { margin: 0 0.25rem; }
+
+    .hero-eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.8rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-title {
+      font-size: clamp(1.8rem, 3.5vw, 2.2rem);
+      line-height: 1.25;
+      margin: 0 0 0.75rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 40rem;
+      margin: 0 0 1.2rem;
+    }
+
+    .subnav {
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .subnav a { margin-right: 0.75rem; }
+
+    .section {
+      margin-top: 2rem;
+      background-color: var(--bg-alt);
+      border-radius: 0.75rem;
+      border: 1px solid var(--border);
+      padding: 1.5rem 1.5rem 1.75rem;
+    }
+
+    .section h2 {
+      font-size: 1.35rem;
+      margin-top: 0;
+      margin-bottom: 0.6rem;
+    }
+
+    .section p {
+      margin-top: 0.25rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .section ul {
+      padding-left: 1.2rem;
+      margin-top: 0.25rem;
+      margin-bottom: 0.4rem;
+    }
+    .section li { margin-bottom: 0.25rem; }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 1.5rem;
+    }
+
+    .pill-row {
+      margin-top: 0.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .pill {
+      font-size: 0.8rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      background-color: var(--accent-soft);
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+      white-space: nowrap;
+    }
+
+    .mini-card {
+      border-radius: 0.75rem;
+      border: 1px solid var(--border);
+      padding: 0.85rem 0.95rem;
+      background-color: #f9fafb;
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin-bottom: 0.8rem;
+    }
+
+    .mini-card strong { display: block; margin-bottom: 0.2rem; }
+
+    .note-box {
+      margin-top: 0.8rem;
+      padding: 0.75rem 0.9rem;
+      border-radius: 0.6rem;
+      background-color: #eff6ff;
+      border: 1px solid #bfdbfe;
+      font-size: 0.9rem;
+      color: #1e3a8a;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      background-color: var(--bg-alt);
+      margin-top: 1rem;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1rem 1.25rem 1.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    @media (max-width: 720px) {
+      .two-col { grid-template-columns: 1fr; }
+      header { position: static; }
+      .nav-shell { flex-direction: column; align-items: flex-start; }
+      nav { justify-content: flex-start; }
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="nav-shell">
+    <div class="brand">
+      <span>GGBS</span>
+      <span>Green–Grey–Blue–Smart Infrastructure</span>
+    </div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/framework/">Framework</a>
+      <a href="/applications/" class="active">Applications</a>
+      <a href="/resources/">Resources</a>
+      <a href="/founder/">Founder</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="breadcrumbs">
+    <a href="/">Home</a> <span>›</span>
+    <a href="/applications/">Applications</a> <span>›</span>
+    <span>Flood Risk &amp; Resilience</span>
+  </div>
+
+  <section>
+    <div class="hero-eyebrow">Applications · Risk & Resilience</div>
+    <h1 class="hero-title">Flood Risk &amp; Resilience</h1>
+    <p class="hero-subtitle">
+      Floods arise from intense rainfall, swollen rivers, coastal storms, and
+      their combinations. The GGBS Framework supports integrated strategies for
+      pluvial, fluvial, and coastal flooding, with a focus on risk reduction,
+      recovery, and long-term resilience.
+    </p>
+
+    <div class="subnav">
+      Other application areas:
+      <a href="/applications/urban-stormwater/">Urban Stormwater</a>
+      <a href="/applications/watersheds/">Watersheds</a>
+      <a href="/applications/estuaries/">Estuaries &amp; Tidal Rivers</a>
+      <a href="/applications/coasts/">Coasts &amp; Shorelines</a>
+      <a href="/applications/sponge-city/">Sponge City / Low-Impact</a>
+      <a href="/applications/data-models/">Data, Models &amp; AI</a>
+    </div>
+
+    <div class="pill-row">
+      <span class="pill">Pluvial (rainfall) flooding</span>
+      <span class="pill">Fluvial (river) flooding</span>
+      <span class="pill">Coastal &amp; surge flooding</span>
+      <span class="pill">Compound events</span>
+      <span class="pill">Risk &amp; resilience</span>
+    </div>
+  </section>
+
+  <section class="section two-col">
+    <div>
+      <h2>From Hazard to Risk to Resilience</h2>
+      <p>
+        Flood risk is more than water levels or discharge. It reflects the
+        combination of:
+      </p>
+      <ul>
+        <li><strong>Hazard</strong> – the probability and intensity of flooding;</li>
+        <li><strong>Exposure</strong> – people, assets, and systems in harm’s way;</li>
+        <li><strong>Vulnerability</strong> – susceptibility to damage and loss;</li>
+        <li><strong>Capacity</strong> – ability to prepare, respond, and recover.</li>
+      </ul>
+      <p>
+        Resilience emphasizes not only reducing damages, but also speeding
+        recovery, maintaining essential functions, and adapting over time.
+      </p>
+    </div>
+
+    <div>
+      <h2>GGBS Lens on Flood Risk</h2>
+      <p>
+        The GGBS Framework views flood risk through four interacting
+        dimensions:
+      </p>
+      <ul>
+        <li><strong>Green</strong> – measures that retain, infiltrate, and slow water;</li>
+        <li><strong>Grey</strong> – levees, walls, tunnels, pumps, and drainage networks;</li>
+        <li><strong>Blue</strong> – rivers, floodplains, wetlands, estuaries, and coasts;</li>
+        <li><strong>Smart</strong> – monitoring, models, early warning, and decision support.</li>
+      </ul>
+      <div class="note-box">
+        A resilient strategy balances investments across these dimensions rather
+        than relying on a single “silver bullet” solution.
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Types of Flooding in the GGBS Framework</h2>
+
+    <div class="mini-card">
+      <strong>Pluvial flooding</strong>
+      Short-duration, intense rainfall that overwhelms local drainage, causing
+      street and basement flooding even away from rivers and coasts.
+    </div>
+
+    <div class="mini-card">
+      <strong>Fluvial flooding</strong>
+      River and stream overflows when upstream runoff and reservoir operations
+      exceed channel and floodplain capacity.
+    </div>
+
+    <div class="mini-card">
+      <strong>Coastal &amp; surge flooding</strong>
+      High water levels and waves driven by storms, tides, and sea-level rise
+      along open coasts and estuary mouths.
+    </div>
+
+    <div class="mini-card">
+      <strong>Compound flooding</strong>
+      Combinations of rainfall, river flows, surge, and tides that occur
+      together, especially in estuaries and low-lying coastal cities.
+    </div>
+  </section>
+
+  <section class="section two-col">
+    <div>
+      <h2>GGBS Strategies for Flood Risk Reduction</h2>
+      <p>
+        Representative strategies across the GGBS dimensions include:
+      </p>
+      <ul>
+        <li>
+          <strong>Green:</strong> distributed GI, reforestation, soil
+          rehabilitation, and wetland restoration to reduce runoff and store
+          water.
+        </li>
+        <li>
+          <strong>Grey:</strong> levees, seawalls, floodwalls, tunnels,
+          detention, and diversion channels to provide robust protection and
+          conveyance.
+        </li>
+        <li>
+          <strong>Blue:</strong> reconnecting floodplains, creating bypass
+          channels, and using flood-compatible land uses in high-risk zones.
+        </li>
+        <li>
+          <strong>Smart:</strong> early warning systems, real-time control of
+          gates and pumps, and scenario-based planning tools.
+        </li>
+      </ul>
+      <p>
+        In practice, portfolios mix these measures to meet local objectives and
+        constraints.
+      </p>
+    </div>
+
+    <div>
+      <h2>Planning, Equity, and Governance</h2>
+      <p>
+        Effective flood-risk management also requires:
+      </p>
+      <ul>
+        <li>Clear objectives that consider safety, environment, and cost;</li>
+        <li>Attention to who benefits and who remains at risk;</li>
+        <li>Land-use planning and zoning aligned with flood hazards;</li>
+        <li>Coordination across agencies and jurisdictions;</li>
+        <li>Engagement with communities throughout the planning process.</li>
+      </ul>
+      <p>
+        Resilience planning recognizes that not all risk can be eliminated; it
+        focuses on reducing unacceptable risk and improving recovery capacity.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Role of Data, Models, and Smart Systems</h2>
+    <p>
+      Smart tools support each phase of the flood-risk cycle:
+    </p>
+    <ul>
+      <li>
+        <strong>Risk assessment:</strong> hydrologic, hydraulic, and surge
+        modeling; inundation mapping; damage and loss estimation.
+      </li>
+      <li>
+        <strong>Monitoring and forecasting:</strong> rainfall, river levels,
+        groundwater, tide and surge monitoring; short-term and seasonal
+        forecasts.
+      </li>
+      <li>
+        <strong>Early warning and response:</strong> thresholds, alerts,
+        evacuation planning, and real-time operations of gates, pumps, and
+        reservoirs.
+      </li>
+      <li>
+        <strong>Adaptive management:</strong> post-event analysis, updating
+        models, and revising strategies as conditions change.
+      </li>
+    </ul>
+    <p>
+      These capabilities link directly to the
+      <a href="/applications/data-models/">Data, Models &amp; AI</a>
+      application area.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Connections to Other GGBS Applications</h2>
+    <p>
+      Flood risk and resilience are cross-cutting themes that draw on multiple
+      application areas:
+    </p>
+    <ul>
+      <li>
+        <a href="/applications/urban-stormwater/">Urban Stormwater</a>
+        addresses pluvial flooding in cities.
+      </li>
+      <li>
+        <a href="/applications/watersheds/">Watersheds</a> address fluvial
+        flooding and upstream–downstream interactions.
+      </li>
+      <li>
+        <a href="/applications/estuaries/">Estuaries &amp; Tidal Rivers</a>
+        and <a href="/applications/coasts/">Coasts &amp; Shorelines</a>
+        address surge, tides, and compound flooding.
+      </li>
+      <li>
+        <a href="/applications/sponge-city/">Sponge City / Low-Impact</a>
+        provides an example of integrated flood-resilience strategies in
+        urbanizing regions.
+      </li>
+    </ul>
+    <p>
+      This page can later host case studies and diagrams illustrating how GGBS
+      has been used to design and evaluate integrated flood-resilience
+      portfolios in different regions.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>© 2025 GGBS – Green–Grey–Blue–Smart Infrastructure Framework</div>
+    <div>Hosted on GitHub Pages</div>
+  </div>
+</footer>
+
+</body>
+</html>
