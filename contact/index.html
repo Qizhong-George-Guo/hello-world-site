@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact – GGBS Framework</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="description"
+        content="Contact information for the Green–Grey–Blue–Smart (GGBS) Framework and Professor Qizhong (George) Guo." />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --bg: #f5f7fa;
+      --bg-alt: #ffffff;
+      --text: #111827;
+      --muted: #4b5563;
+      --accent: #2563eb;
+      --accent-soft: #dbeafe;
+      --border: #e5e7eb;
+      --max-width: 960px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      color: var(--text);
+      background-color: var(--bg);
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      background-color: var(--bg-alt);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-shell {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    nav { display: flex; gap: 1rem; flex-wrap: wrap; }
+    nav a { font-size: 0.9rem; color: var(--muted); }
+    nav a.active { color: var(--accent); font-weight: 600; }
+
+    .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.03em;
+      display: flex; align-items: baseline; gap: 0.4rem;
+    }
+    .brand span:last-child {
+      font-weight: 500; font-size: 0.85rem; color: var(--muted);
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 3rem;
+    }
+
+    .breadcrumbs {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+    .breadcrumbs a { color: var(--muted); }
+    .breadcrumbs span { margin: 0 0.25rem; }
+
+    .hero-eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.8rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-title {
+      font-size: clamp(1.9rem, 3.5vw, 2.3rem);
+      line-height: 1.25;
+      margin: 0 0 0.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 44rem;
+      margin: 0 0 1.2rem;
+    }
+
+    .section {
+      margin-top: 2rem;
+      background-color: var(--bg-alt);
+      border-radius: 0.75rem;
+      border: 1px solid var(--border);
+      padding: 1.5rem 1.5rem 1.75rem;
+    }
+
+    .section h2 {
+      font-size: 1.3rem;
+      margin-top: 0;
+      margin-bottom: 0.8rem;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 1.5rem;
+    }
+
+    .info-line {
+      margin-bottom: 0.4rem;
+      font-size: 0.95rem;
+    }
+
+    .info-label {
+      font-weight: 600;
+    }
+
+    .note-box {
+      margin-top: 0.9rem;
+      padding: 0.75rem 0.9rem;
+      border-radius: 0.6rem;
+      background-color: #eff6ff;
+      border: 1px solid #bfdbfe;
+      font-size: 0.9rem;
+      color: #1e3a8a;
+    }
+
+    /* Form styles */
+    form {
+      display: grid;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+    }
+
+    label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 0.15rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 0.45rem 0.55rem;
+      border-radius: 0.5rem;
+      border: 1px solid var(--border);
+      font-family: inherit;
+      font-size: 0.95rem;
+      background-color: #f9fafb;
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .help-text {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 0.1rem;
+    }
+
+    button[type="submit"] {
+      margin-top: 0.5rem;
+      padding: 0.5rem 1.0rem;
+      border-radius: 999px;
+      border: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      background-color: var(--accent);
+      color: #ffffff;
+    }
+
+    button[type="submit"]:hover {
+      opacity: 0.95;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      background-color: var(--bg-alt);
+      margin-top: 1rem;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1rem 1.25rem 1.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    @media (max-width: 720px) {
+      .two-col { grid-template-columns: 1fr; }
+      header { position: static; }
+      .nav-shell { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="nav-shell">
+    <div class="brand">
+      <span>GGBS</span>
+      <span>Green–Grey–Blue–Smart Infrastructure</span>
+    </div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/framework/">Framework</a>
+      <a href="/applications/">Applications</a>
+      <a href="/resources/">Resources</a>
+      <a href="/founder/">Founder</a>
+      <a href="/contact/" class="active">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="breadcrumbs">
+    <a href="/">Home</a> › <span>Contact</span>
+  </div>
+
+  <section>
+    <div class="hero-eyebrow">Contact</div>
+    <h1 class="hero-title">Get in Touch</h1>
+    <p class="hero-subtitle">
+      For questions about the Green–Grey–Blue–Smart (GGBS) Framework,
+      potential collaborations, speaking invitations, or teaching materials,
+      you may contact Professor Qizhong (George) Guo using the information
+      below.
+    </p>
+  </section>
+
+  <section class="section two-col">
+    <!-- Left: direct contact info -->
+    <div>
+      <h2>Contact Information</h2>
+
+      <p class="info-line">
+        <span class="info-label">Name:</span>
+        Qizhong (George) Guo
+      </p>
+      <p class="info-line">
+        <span class="info-label">Affiliation:</span>
+        Professor of Civil &amp; Environmental Engineering,  
+        Rutgers University–New Brunswick, New Jersey, U.S.A.
+      </p>
+      <p class="info-line">
+        <span class="info-label">Email:</span>
+        <!-- Replace with your preferred email -->
+        <a href="mailto:your.email@rutgers.edu">your.email@rutgers.edu</a>
+      </p>
+
+      <p class="info-line">
+        <span class="info-label">Topics of interest:</span>
+        Green infrastructure, stormwater management, watershed and basin planning,
+        estuaries and coasts, flood risk and resilience, teaching and training.
+      </p>
+
+      <div class="note-box">
+        For detailed background, publications, and teaching materials, please see
+        the <a href="/founder/">Founder</a> and <a href="/resources/">Resources</a> sections.
+      </div>
+    </div>
+
+    <!-- Right: optional contact form -->
+    <div>
+      <h2>Contact Form (Optional)</h2>
+      <p style="font-size:0.9rem; color:var(--muted); margin-top:0; margin-bottom:0.6rem;">
+        You may also use this form to send a short message.  
+        (To activate automated handling, connect this form to a service such as Formspree.)
+      </p>
+
+      <!--
+        To make this form functional with Formspree:
+        1. Go to https://formspree.io/
+        2. Create a new form and copy the "action" URL they provide.
+        3. Replace the value of the action attribute below with that URL.
+      -->
+      <form method="POST" action="#">
+        <div>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" />
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="_replyto" type="email" autocomplete="email" />
+          <div class="help-text">Your email will be used only to respond to your message.</div>
+        </div>
+
+        <div>
+          <label for="subject">Subject</label>
+          <input id="subject" name="subject" type="text" />
+        </div>
+
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message"></textarea>
+        </div>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>© 2025 GGBS – Green–Grey–Blue–Smart Infrastructure Framework</div>
+    <div>Hosted on GitHub Pages</div>
+  </div>
+</footer>
+
+</body>
+</html>
