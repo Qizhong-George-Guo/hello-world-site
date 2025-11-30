@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Publications – GGBS Resources</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="description"
+        content="Publications related to the GGBS Framework, including peer-reviewed papers, book chapters, and foundational research in green, grey, blue, and smart infrastructure." />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --bg: #f5f7fa;
+      --bg-alt: #ffffff;
+      --text: #111827;
+      --muted: #4b5563;
+      --accent: #2563eb;
+      --accent-soft: #dbeafe;
+      --border: #e5e7eb;
+      --max-width: 960px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      color: var(--text);
+      background-color: var(--bg);
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      background-color: var(--bg-alt);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-shell {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    nav { display: flex; gap: 1rem; flex-wrap: wrap; }
+    nav a { font-size: 0.9rem; color: var(--muted); }
+    nav a.active { color: var(--accent); font-weight: 600; }
+
+    .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.03em;
+      display: flex; align-items: baseline; gap: 0.4rem;
+    }
+    .brand span:last-child {
+      font-weight: 500; font-size: 0.85rem; color: var(--muted);
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 3rem;
+    }
+
+    .breadcrumbs {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+    .breadcrumbs a { color: var(--muted); }
+    .breadcrumbs span { margin: 0 0.25rem; }
+
+    .hero-eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.8rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-title {
+      font-size: clamp(1.8rem, 3.5vw, 2.2rem);
+      line-height: 1.25;
+      margin: 0 0 0.75rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 40rem;
+      margin: 0 0 1.2rem;
+    }
+
+    .section {
+      margin-top: 2rem;
+      background-color: var(--bg-alt);
+      border-radius: 0.75rem;
+      border: 1px solid var(--border);
+      padding: 1.5rem 1.5rem 1.75rem;
+    }
+
+    .section h2 {
+      font-size: 1.3rem;
+      margin-top: 0;
+      margin-bottom: 0.8rem;
+    }
+
+    .pub-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .pub-item {
+      margin-bottom: 1.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .pub-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .pub-title {
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+
+    .pub-meta {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.3rem;
+    }
+
+    .pub-links a {
+      margin-right: 0.7rem;
+      font-size: 0.9rem;
+    }
+
+    .note-box {
+      margin-top: 1rem;
+      padding: 0.75rem 0.9rem;
+      border-radius: 0.6rem;
+      background-color: #eff6ff;
+      border: 1px solid #bfdbfe;
+      font-size: 0.9rem;
+      color: #1e3a8a;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      background-color: var(--bg-alt);
+      margin-top: 1rem;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1rem 1.25rem 1.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="nav-shell">
+    <div class="brand">
+      <span>GGBS</span>
+      <span>Green–Grey–Blue–Smart Infrastructure</span>
+    </div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/framework/">Framework</a>
+      <a href="/applications/">Applications</a>
+      <a href="/resources/" class="active">Resources</a>
+      <a href="/founder/">Founder</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="breadcrumbs">
+    <a href="/">Home</a> ›
+    <a href="/resources/">Resources</a> ›
+    <span>Publications</span>
+  </div>
+
+  <section>
+    <div class="hero-eyebrow">Resources</div>
+    <h1 class="hero-title">Publications</h1>
+    <p class="hero-subtitle">
+      Selected peer-reviewed papers, book chapters, and review articles related
+      to the Green–Grey–Blue–Smart (GGBS) Framework.  
+      Items below are placeholders — you can replace them with real citations and PDF/DOI links.
+    </p>
+  </section>
+
+  <!-- ============================================================= -->
+  <!-- PEER-REVIEWED PAPERS -->
+  <!-- ============================================================= -->
+
+  <section class="section">
+    <h2>Peer-Reviewed Journal Articles</h2>
+
+    <ul class="pub-list">
+
+      <li class="pub-item">
+        <div class="pub-title">
+          The Green–Grey–Blue–Smart Framework for Integrated Urban Water Resilience
+        </div>
+        <div class="pub-meta">
+          Journal of Urban Water Systems, 2024 — Guo, Q. et al.
+        </div>
+        <div class="pub-links">
+          <a href="#" target="_blank">PDF</a>
+          <a href="#" target="_blank">DOI</a>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <div class="pub-title">
+          Rainfall–Runoff Processes in Engineered Permeable Surfaces: A Multi-Scale Evaluation
+        </div>
+        <div class="pub-meta">
+          Hydrology & Earth System Sciences, 2023 — Guo, Q. et al.
+        </div>
+        <div class="pub-links">
+          <a href="#">PDF</a>
+          <a href="#">DOI</a>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <div class="pub-title">
+          Dynamics of Stormwater Control Measures in High-Density Urban Districts
+        </div>
+        <div class="pub-meta">
+          Water Research, 2022 — Guo, Q. et al.
+        </div>
+        <div class="pub-links">
+          <a href="#">PDF</a>
+          <a href="#">DOI</a>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <div class="pub-title">
+          Coastal Flooding and Sediment Dynamics under Sea-Level Rise Scenarios
+        </div>
+        <div class="pub-meta">
+          Coastal Engineering, 2021 — Guo, Q. et al.
+        </div>
+        <div class="pub-links">
+          <a href="#">PDF</a>
+          <a href="#">DOI</a>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+  <!-- ============================================================= -->
+  <!-- BOOK CHAPTERS -->
+  <!-- ============================================================= -->
+
+  <section class="section">
+    <h2>Book Chapters & Invited Overview Articles</h2>
+
+    <ul class="pub-list">
+
+      <li class="pub-item">
+        <div class="pub-title">Sponge City Concepts and Their Evolution</div>
+        <div class="pub-meta">
+          In: Urban Water Innovation, Springer, 2023 — Guo, Q.
+        </div>
+        <div class="pub-links">
+          <a href="#">PDF</a>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <div class="pub-title">
+          Flood Risk in Estuaries and Tidal Rivers: Processes and Management
+        </div>
+        <div class="pub-meta">
+          In: Estuarine Science Handbook, Elsevier, 2022 — Guo, Q.
+        </div>
+        <div class="pub-links"><a href="#">PDF</a></div>
+      </li>
+
+    </ul>
+  </section>
+
+  <!-- ============================================================= -->
+  <!-- REVIEW PAPERS OR SYNTHESIS PAPERS -->
+  <!-- ============================================================= -->
+
+  <section class="section">
+    <h2>Review & Synthesis Papers</h2>
+
+    <ul class="pub-list">
+
+      <li class="pub-item">
+        <div class="pub-title">Management Strategies for the Mississippi River Basin</div>
+        <div class="pub-meta">
+          River Research and Applications, 2023 — Guo, Q.  
+          (Your highly viewed review paper)
+        </div>
+        <div class="pub-links">
+          <a href="#">PDF</a>
+          <a href="#">DOI</a>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <div class="pub-title">
+          Integrating Green, Grey, and Blue Infrastructure: A Global Review
+        </div>
+        <div class="pub-meta">
+          Water Science & Technology, 2022 — Guo, Q. et al.
+        </div>
+        <div class="pub-links"><a href="#">PDF</a></div>
+      </li>
+
+    </ul>
+  </section>
+
+  <section class="note-box">
+    As you upload PDFs or link DOIs, simply replace the placeholders above with
+    your real citations and file paths. Each publication will then have a
+    stable, citable URL on <strong>GGBS.ai</strong>.
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>© 2025 GGBS – Green–Grey–Blue–Smart Infrastructure Framework</div>
+    <div>Hosted on GitHub Pages</div>
+  </div>
+</footer>
+
+</body>
+</html>
