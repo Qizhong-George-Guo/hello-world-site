@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Teaching Materials – GGBS Resources</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="description"
+        content="Teaching materials related to the GGBS Framework, including lecture notes, slide decks, example problems, infographics, and short videos for stormwater, watershed, estuarine, and coastal systems." />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --bg: #f5f7fa;
+      --bg-alt: #ffffff;
+      --text: #111827;
+      --muted: #4b5563;
+      --accent: #2563eb;
+      --accent-soft: #dbeafe;
+      --border: #e5e7eb;
+      --max-width: 960px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      color: var(--text);
+      background-color: var(--bg);
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      background-color: var(--bg-alt);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-shell {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    nav { display: flex; gap: 1rem; flex-wrap: wrap; }
+    nav a { font-size: 0.9rem; color: var(--muted); }
+    nav a.active { color: var(--accent); font-weight: 600; }
+
+    .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.03em;
+      display: flex; align-items: baseline; gap: 0.4rem;
+    }
+    .brand span:last-child {
+      font-weight: 500; font-size: 0.85rem; color: var(--muted);
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 3rem;
+    }
+
+    .breadcrumbs {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+    .breadcrumbs a { color: var(--muted); }
+    .breadcrumbs span { margin: 0 0.25rem; }
+
+    .hero-eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.8rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-title {
+      font-size: clamp(1.8rem, 3.5vw, 2.2rem);
+      line-height: 1.25;
+      margin: 0 0 0.75rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 42rem;
+      margin: 0 0 1.2rem;
+    }
+
+    .section {
+      margin-top: 2rem;
+      background-color: var(--bg-alt);
+      border-radius: 0.75rem;
+      border: 1px solid var(--border);
+      padding: 1.5rem 1.5rem 1.75rem;
+    }
+
+    .section h2 {
+      font-size: 1.3rem;
+      margin-top: 0;
+      margin-bottom: 0.8rem;
+    }
+
+    .subheading {
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      font-size: 1.05rem;
+    }
+
+    .item-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .item {
+      margin-bottom: 1.1rem;
+      padding-bottom: 0.9rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .item-title {
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+
+    .item-meta {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.3rem;
+    }
+
+    .item-links a {
+      margin-right: 0.7rem;
+      font-size: 0.9rem;
+    }
+
+    .tag-row {
+      margin-top: 0.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      background-color: var(--accent-soft);
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+      white-space: nowrap;
+    }
+
+    .note-box {
+      margin-top: 1rem;
+      padding: 0.75rem 0.9rem;
+      border-radius: 0.6rem;
+      background-color: #eff6ff;
+      border: 1px solid #bfdbfe;
+      font-size: 0.9rem;
+      color: #1e3a8a;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      background-color: var(--bg-alt);
+      margin-top: 1rem;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1rem 1.25rem 1.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="nav-shell">
+    <div class="brand">
+      <span>GGBS</span>
+      <span>Green–Grey–Blue–Smart Infrastructure</span>
+    </div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/framework/">Framework</a>
+      <a href="/applications/">Applications</a>
+      <a href="/resources/" class="active">Resources</a>
+      <a href="/founder/">Founder</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="breadcrumbs">
+    <a href="/">Home</a> ›
+    <a href="/resources/">Resources</a> ›
+    <span>Teaching</span>
+  </div>
+
+  <section>
+    <div class="hero-eyebrow">Resources</div>
+    <h1 class="hero-title">Teaching Materials</h1>
+    <p class="hero-subtitle">
+      Selected course materials, slide decks, example problems, infographics,
+      and short videos related to the GGBS Framework and its applications.
+      Items below are placeholders — you can replace them with your actual
+      files and links as you upload them.
+    </p>
+  </section>
+
+  <!-- ============================================================= -->
+  <!-- COURSE MODULES & SLIDE DECKS -->
+  <!-- ============================================================= -->
+
+  <section class="section">
+    <div class="subheading">Course Modules &amp; Slide Decks</div>
+
+    <ul class="item-list">
+
+      <li class="item">
+        <div class="item-title">
+          Green Stormwater Infrastructure – Graduate Course Module
+        </div>
+        <div class="item-meta">
+          Lecture slides (approx. 8–10 sessions) covering GI design, hydrology,
+          modeling, and case studies.
+        </div>
+        <div class="item-links">
+          <a href="#">Slides (PDF)</a>
+          <a href="#">Outline</a>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Green infrastructure</span>
+          <span class="tag">Urban stormwater</span>
+          <span class="tag">Graduate course</span>
+        </div>
+      </li>
+
+      <li class="item">
+        <div class="item-title">
+          Coastal Engineering – Waves, Sediment, and Coastal Structures
+        </div>
+        <div class="item-meta">
+          Slide decks covering wave theory, littoral processes, hard and soft
+          coastal protection, and coastal management.
+        </div>
+        <div class="item-links">
+          <a href="#">Slides (PDF)</a>
+          <a href="#">Syllabus</a>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Coastal engineering</span>
+          <span class="tag">Waves &amp; sediment</span>
+          <span class="tag">Hard &amp; soft structures</span>
+        </div>
+      </li>
+
+      <li class="item">
+        <div class="item-title">
+          Watershed Hydrology &amp; Resilience – Short Course Materials
+        </div>
+        <div class="item-meta">
+          Condensed slide deck introducing watershed processes, floods,
+          sediment, and integrated resilience strategies.
+        </div>
+        <div class="item-links">
+          <a href="#">Slides (PDF)</a>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Watersheds</span>
+          <span class="tag">Flood resilience</span>
+          <span class="tag">Short course</span>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+  <!-- ============================================================= -->
+  <!-- EXAMPLE PROBLEMS & EXERCISES -->
+  <!-- ============================================================= -->
+
+  <section class="section">
+    <div class="subheading">Example Problems &amp; Exercises</div>
+
+    <ul class="item-list">
+
+      <li class="item">
+        <div class="item-title">
+          Coastal Wave Transformation and Breaking – Worked Example Set
+        </div>
+        <div class="item-meta">
+          A set of example problems on shoaling, refraction, breaking, and
+          wave setup, with detailed solutions.
+        </div>
+        <div class="item-links">
+          <a href="#">Problem set (PDF)</a>
+          <a href="#">Solutions (PDF)</a>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Waves</span>
+          <span class="tag">Example problems</span>
+        </div>
+      </li>
+
+      <li class="item">
+        <div class="item-title">
+          Design of Bioretention Cells and Green Roofs – Calculation Examples
+        </div>
+        <div class="item-meta">
+          Example calculations for sizing bioretention cells, green roofs, and
+          permeable pavements under design storms.
+        </div>
+        <div class="item-links">
+          <a href="#">Examples (PDF)</a>
+        </div>
+        <div class="tag-row">
+          <span class="tag">GI design</span>
+          <span class="tag">Hydrology</span>
+        </div>
+      </li>
+
+      <li class="item">
+        <div class="item-title">
+          Watershed Flood Routing and Reservoir Operation – Classroom Exercises
+        </div>
+        <div class="item-meta">
+          Exercises illustrating hydrograph routing, storage–outflow relations,
+          and basic operation rules.
+        </div>
+        <div class="item-links">
+          <a href="#">Exercises (PDF)</a>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Flood routing</span>
+          <span class="tag">Reservoirs</span>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+  <!-- ============================================================= -->
+  <!-- INFOGRAPHICS & VISUAL SUMMARIES -->
+  <!-- ============================================================= -->
+
+  <section class="section">
+    <div class="subheading">Infographics &amp; Visual Summaries</div>
+
+    <ul class="item-list">
+
+      <li class="item">
+        <div class="item-title">
+          GGBS Coastal Engineering – Seven Topic Infographic Set
+        </div>
+        <div class="item-meta">
+          One-slide visual summaries for each of seven coastal topics, generated
+          from full lecture decks and refined for teaching use.
+        </div>
+        <div class="item-links">
+          <a href="#">Infographics (PDF)</a>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Coastal</span>
+          <span class="tag">Infographic</span>
+          <span class="tag">Teaching aid</span>
+        </div>
+      </li>
+
+      <li class="item">
+        <div class="item-title">
+          Green–Grey–Blue–Smart Synergy Diagram
+        </div>
+        <div class="item-meta">
+          A conceptual diagram showing interactions and co-benefits across
+          GGBS dimensions, suitable for use in lectures and reports.
+        </div>
+        <div class="item-links">
+          <a href="#">Diagram (PDF)</a>
+        </div>
+        <div class="tag-row">
+          <span class="tag">GGBS</span>
+          <span class="tag">Conceptual diagram</span>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+  <!-- ============================================================= -->
+  <!-- SHORT VIDEOS & AI-GENERATED CONTENT -->
+  <!-- ============================================================= -->
+
+  <section class="section">
+    <div class="subheading">Short Videos &amp; AI-Generated Materials</div>
+
+    <ul class="item-list">
+
+      <li class="item">
+        <div class="item-title">
+          Green Stormwater Infrastructure – 9-Minute Introductory Video (Chinese)
+        </div>
+        <div class="item-meta">
+          AI-generated narration based on English lecture notes, aimed at a
+          broader audience while retaining key technical content.
+        </div>
+        <div class="item-links">
+          <a href="#">Video link</a>
+          <a href="#">Summary (PDF)</a>
+        </div>
+        <div class="tag-row">
+          <span class="tag">AI-generated</span>
+          <span class="tag">Green infrastructure</span>
+          <span class="tag">Chinese</span>
+        </div>
+      </li>
+
+      <li class="item">
+        <div class="item-title">
+          Coastal Engineering – 8-Minute Overview Video
+        </div>
+        <div class="item-meta">
+          Condensed AI-generated video summarizing one multi-hour lecture on
+          hard coastal structures, used as both introduction and recap.
+        </div>
+        <div class="item-links">
+          <a href="#">Video link</a>
+          <a href="#">Key frames (PDF)</a>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Coastal</span>
+          <span class="tag">AI video</span>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+  <section class="note-box">
+    To activate these materials, upload the corresponding PDFs, slide decks,
+    and supporting files to your GitHub repository (for example under
+    <code>/teaching/</code> or <code>/media/</code>) and replace the
+    <code>href="#”</code> placeholders above with actual paths or external
+    links (e.g., YouTube, institutional repositories).  
+    Each item will then have a stable URL you can share with students and
+    colleagues.
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>© 2025 GGBS – Green–Grey–Blue–Smart Infrastructure Framework</div>
+    <div>Hosted on GitHub Pages</div>
+  </div>
+</footer>
+
+</body>
+</html>
