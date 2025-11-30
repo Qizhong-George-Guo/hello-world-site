@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Founder – GGBS Framework</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="description"
+        content="Founder page for the Green–Grey–Blue–Smart (GGBS) Framework, introduced by Professor Qizhong (George) Guo, focusing on integrated infrastructure for resilient water and urban systems." />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --bg: #f5f7fa;
+      --bg-alt: #ffffff;
+      --text: #111827;
+      --muted: #4b5563;
+      --accent: #2563eb;
+      --accent-soft: #dbeafe;
+      --border: #e5e7eb;
+      --max-width: 960px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      color: var(--text);
+      background-color: var(--bg);
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      background-color: var(--bg-alt);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-shell {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    nav { display: flex; gap: 1rem; flex-wrap: wrap; }
+    nav a { font-size: 0.9rem; color: var(--muted); }
+    nav a.active { color: var(--accent); font-weight: 600; }
+
+    .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.03em;
+      display: flex; align-items: baseline; gap: 0.4rem;
+    }
+    .brand span:last-child {
+      font-weight: 500; font-size: 0.85rem; color: var(--muted);
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 3rem;
+    }
+
+    .breadcrumbs {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+    .breadcrumbs a { color: var(--muted); }
+    .breadcrumbs span { margin: 0 0.25rem; }
+
+    .hero-eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.8rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-title {
+      font-size: clamp(1.9rem, 3.5vw, 2.4rem);
+      line-height: 1.25;
+      margin: 0 0 0.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 44rem;
+      margin: 0 0 1.2rem;
+    }
+
+    .pill-row {
+      margin-top: 0.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .pill {
+      font-size: 0.8rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      background-color: var(--accent-soft);
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+      white-space: nowrap;
+    }
+
+    .section {
+      margin-top: 2rem;
+      background-color: var(--bg-alt);
+      border-radius: 0.75rem;
+      border: 1px solid var(--border);
+      padding: 1.5rem 1.5rem 1.75rem;
+    }
+
+    .section h2 {
+      font-size: 1.3rem;
+      margin-top: 0;
+      margin-bottom: 0.8rem;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 1.5rem;
+    }
+
+    .mini-heading {
+      font-weight: 600;
+      margin-top: 0.1rem;
+      margin-bottom: 0.4rem;
+      font-size: 1rem;
+    }
+
+    .profile-card {
+      border-radius: 0.9rem;
+      border: 1px solid var(--border);
+      background-color: #f9fafb;
+      padding: 1rem 1.1rem 1.1rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .profile-name {
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 0.15rem;
+      color: var(--text);
+    }
+
+    .profile-role {
+      font-size: 0.9rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .link-row {
+      margin-top: 0.4rem;
+      font-size: 0.9rem;
+    }
+    .link-row a {
+      margin-right: 0.7rem;
+    }
+
+    .list-tight {
+      padding-left: 1.2rem;
+      margin-top: 0.25rem;
+      margin-bottom: 0.4rem;
+    }
+    .list-tight li {
+      margin-bottom: 0.25rem;
+    }
+
+    .note-box {
+      margin-top: 0.9rem;
+      padding: 0.75rem 0.9rem;
+      border-radius: 0.6rem;
+      background-color: #eff6ff;
+      border: 1px solid #bfdbfe;
+      font-size: 0.9rem;
+      color: #1e3a8a;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      background-color: var(--bg-alt);
+      margin-top: 1rem;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1rem 1.25rem 1.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    @media (max-width: 720px) {
+      .two-col { grid-template-columns: 1fr; }
+      header { position: static; }
+      .nav-shell { flex-direction: column; align-items: flex-start; }
+      nav { justify-content: flex-start; }
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="nav-shell">
+    <div class="brand">
+      <span>GGBS</span>
+      <span>Green–Grey–Blue–Smart Infrastructure</span>
+    </div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/framework/">Framework</a>
+      <a href="/applications/">Applications</a>
+      <a href="/resources/">Resources</a>
+      <a href="/founder/" class="active">Founder</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="breadcrumbs">
+    <a href="/">Home</a> ›
+    <span>Founder</span>
+  </div>
+
+  <section>
+    <div class="hero-eyebrow">Founder</div>
+    <h1 class="hero-title">Qizhong (George) Guo</h1>
+    <p class="hero-subtitle">
+      Professor of Civil &amp; Environmental Engineering and founder of the
+      Green–Grey–Blue–Smart (GGBS) Framework for integrated water and urban
+      systems.
+    </p>
+
+    <div class="pill-row">
+      <span class="pill">Green infrastructure</span>
+      <span class="pill">Urban stormwater</span>
+      <span class="pill">Watersheds</span>
+      <span class="pill">Estuaries &amp; coasts</span>
+      <span class="pill">Flood resilience</span>
+      <span class="pill">Teaching &amp; mentoring</span>
+    </div>
+  </section>
+
+  <section class="section two-col">
+    <div>
+      <h2>Background &amp; Professional Focus</h2>
+      <p>
+        Qizhong (George) Guo is a professor of civil and environmental
+        engineering at Rutgers, The State University of New Jersey. His work
+        spans urban stormwater management, watershed hydrology, estuarine and
+        coastal processes, and flood resilience.
+      </p>
+      <p>
+        Over the course of his career, he has been involved in:
+      </p>
+      <ul class="list-tight">
+        <li>Design, analysis, and monitoring of green stormwater infrastructure;</li>
+        <li>Watershed and basin-scale management strategies;</li>
+        <li>Estuarine and coastal hydrodynamics, waves, and sediment transport;</li>
+        <li>Assessment of flood risk across pluvial, fluvial, and coastal domains;</li>
+        <li>Teaching and mentoring at the graduate and undergraduate levels.</li>
+      </ul>
+      <p>
+        Much of this work has been carried out in collaboration with cities,
+        utilities, agencies, and international partners.
+      </p>
+    </div>
+
+    <aside>
+      <div class="profile-card">
+        <div class="profile-name">Qizhong (George) Guo</div>
+        <div class="profile-role">
+          Professor of Civil &amp; Environmental Engineering  
+          Rutgers, The State University of New Jersey
+        </div>
+        <div class="mini-heading">Areas of work</div>
+        <ul class="list-tight">
+          <li>Urban stormwater &amp; green infrastructure</li>
+          <li>Watershed hydrology &amp; sediment</li>
+          <li>Estuarine and coastal processes</li>
+          <li>Flood risk &amp; resilience</li>
+        </ul>
+        <div class="mini-heading" style="margin-top:0.8rem;">Links</div>
+        <div class="link-row">
+          <a href="#" target="_blank">CV (PDF)</a>
+          <a href="#" target="_blank">Google Scholar</a>
+          <a href="#" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <section class="section">
+    <h2>Why GGBS?</h2>
+    <p>
+      The GGBS Framework grew out of decades of research, teaching, and
+      project work in which “green infrastructure,” “grey infrastructure,”
+      “blue systems,” and “smart tools” were often discussed separately but
+      needed to function together in the real world.
+    </p>
+    <p>
+      GGBS was created to:
+    </p>
+    <ul class="list-tight">
+      <li>Provide a simple, memorable way to think about integrated infrastructure;</li>
+      <li>Connect site-scale practices to watershed, estuary, and coastal systems;</li>
+      <li>Bridge engineering design, environmental performance, and social goals;</li>
+      <li>Give students, practitioners, and decision-makers a common language.</li>
+    </ul>
+    <p>
+      The framework is intentionally practical: it is designed to support
+      real projects, policies, and teaching modules, not only conceptual
+      diagrams.
+    </p>
+    <div class="note-box">
+      GGBS is not a replacement for existing methods or standards. It is a way
+      to organize them, see gaps, and design portfolios that combine
+      Green, Grey, Blue, and Smart elements more deliberately.
+    </div>
+  </section>
+
+  <section class="section two-col">
+    <div>
+      <h2>Threads Across Research, Teaching &amp; Practice</h2>
+      <p>
+        The GGBS Framework reflects several recurring threads in Professor Guo’s
+        work:
+      </p>
+      <ul class="list-tight">
+        <li>
+          <strong>Urban stormwater and green infrastructure</strong> –  
+          from lab experiments and field monitoring to planning and design
+          guidance for cities.
+        </li>
+        <li>
+          <strong>Watershed and basin management</strong> –  
+          including large-scale strategies for river basins and their tributaries.
+        </li>
+        <li>
+          <strong>Estuaries and coasts</strong> –  
+          tides, storm surge, waves, sediment, and shoreline change.
+        </li>
+        <li>
+          <strong>Flood risk and resilience</strong> –  
+          integrating pluvial, fluvial, and coastal flooding in risk assessment
+          and mitigation.
+        </li>
+        <li>
+          <strong>Education and mentoring</strong> –  
+          courses on green infrastructure, hydrology, and coastal engineering,
+          plus supervision of numerous student projects and theses.
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <h2>Collaboration &amp; Knowledge Sharing</h2>
+      <p>
+        GGBS.ai is intended as a collaborative space, not just a personal
+        portfolio. Over time, the site will:
+      </p>
+      <ul class="list-tight">
+        <li>Collect and organize publications, reports, and teaching materials;</li>
+        <li>Share case studies from different regions and contexts;</li>
+        <li>Provide tools, datasets, and example workflows;</li>
+        <li>Highlight student work and partner contributions where appropriate.</li>
+      </ul>
+      <p>
+        The aim is to make practical knowledge easier to find and reuse, and to
+        encourage dialogue across disciplines and sectors.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Working With GGBS</h2>
+    <p>
+      Potential ways to engage with the GGBS Framework include:
+    </p>
+    <ul class="list-tight">
+      <li>Using the framework to structure local or regional resilience plans;</li>
+      <li>Incorporating GGBS diagrams and concepts into teaching materials;</li>
+      <li>Collaborating on case studies or comparative analyses;</li>
+      <li>Exploring integration with digital tools, models, and AI workflows.</li>
+    </ul>
+    <p>
+      For collaboration or inquiries, please use the
+      <a href="/contact/">Contact</a> page to get in touch.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>© 2025 GGBS – Green–Grey–Blue–Smart Infrastructure Framework</div>
+    <div>Hosted on GitHub Pages</div>
+  </div>
+</footer>
+
+</body>
+</html>
