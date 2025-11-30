@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sponge City / Low-Impact Development – GGBS Applications</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="description"
+        content="Sponge City and Low-Impact Development applications of the GGBS Framework – integrating green, grey, blue, and smart systems to create urban districts that absorb, store, and release water more naturally." />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --bg: #f5f7fa;
+      --bg-alt: #ffffff;
+      --text: #111827;
+      --muted: #4b5563;
+      --accent: #2563eb;
+      --accent-soft: #dbeafe;
+      --border: #e5e7eb;
+      --max-width: 960px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      color: var(--text);
+      background-color: var(--bg);
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      background-color: var(--bg-alt);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-shell {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    nav { display: flex; gap: 1rem; flex-wrap: wrap; }
+    nav a { font-size: 0.9rem; color: var(--muted); }
+    nav a.active { color: var(--accent); font-weight: 600; }
+
+    .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.03em;
+      display: flex; align-items: baseline; gap: 0.4rem;
+    }
+    .brand span:last-child {
+      font-weight: 500; font-size: 0.85rem; color: var(--muted);
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 3rem;
+    }
+
+    .breadcrumbs {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+    .breadcrumbs a { color: var(--muted); }
+    .breadcrumbs span { margin: 0 0.25rem; }
+
+    .hero-eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.8rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-title {
+      font-size: clamp(1.8rem, 3.5vw, 2.2rem);
+      line-height: 1.25;
+      margin: 0 0 0.75rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 40rem;
+      margin: 0 0 1.2rem;
+    }
+
+    .subnav {
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .subnav a { margin-right: 0.75rem; }
+
+    .section {
+      margin-top: 2rem;
+      background-color: var(--bg-alt);
+      border-radius: 0.75rem;
+      border: 1px solid var(--border);
+      padding: 1.5rem 1.5rem 1.75rem;
+    }
+
+    .section h2 {
+      font-size: 1.35rem;
+      margin-top: 0;
+      margin-bottom: 0.6rem;
+    }
+
+    .section p {
+      margin-top: 0.25rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .section ul {
+      padding-left: 1.2rem;
+      margin-top: 0.25rem;
+      margin-bottom: 0.4rem;
+    }
+    .section li { margin-bottom: 0.25rem; }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 1.5rem;
+    }
+
+    .pill-row {
+      margin-top: 0.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .pill {
+      font-size: 0.8rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      background-color: var(--accent-soft);
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+      white-space: nowrap;
+    }
+
+    .mini-card {
+      border-radius: 0.75rem;
+      border: 1px solid var(--border);
+      padding: 0.85rem 0.95rem;
+      background-color: #f9fafb;
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin-bottom: 0.8rem;
+    }
+
+    .mini-card strong { display: block; margin-bottom: 0.2rem; }
+
+    .note-box {
+      margin-top: 0.8rem;
+      padding: 0.75rem 0.9rem;
+      border-radius: 0.6rem;
+      background-color: #eff6ff;
+      border: 1px solid #bfdbfe;
+      font-size: 0.9rem;
+      color: #1e3a8a;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      background-color: var(--bg-alt);
+      margin-top: 1rem;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1rem 1.25rem 1.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    @media (max-width: 720px) {
+      .two-col { grid-template-columns: 1fr; }
+      header { position: static; }
+      .nav-shell { flex-direction: column; align-items: flex-start; }
+      nav { justify-content: flex-start; }
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="nav-shell">
+    <div class="brand">
+      <span>GGBS</span>
+      <span>Green–Grey–Blue–Smart Infrastructure</span>
+    </div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/framework/">Framework</a>
+      <a href="/applications/" class="active">Applications</a>
+      <a href="/resources/">Resources</a>
+      <a href="/founder/">Founder</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="breadcrumbs">
+    <a href="/">Home</a> <span>›</span>
+    <a href="/applications/">Applications</a> <span>›</span>
+    <span>Sponge City / Low-Impact Development</span>
+  </div>
+
+  <section>
+    <div class="hero-eyebrow">Applications · Urban Resilience</div>
+    <h1 class="hero-title">Sponge City / Low-Impact Development</h1>
+    <p class="hero-subtitle">
+      The Sponge City and Low-Impact Development concepts seek to make cities
+      behave more like sponges: absorbing, storing, and releasing water in a
+      controlled way. The GGBS Framework provides a structure to integrate
+      these ideas with conventional infrastructure, watershed processes, and
+      smart tools.
+    </p>
+
+    <div class="subnav">
+      Other application areas:
+      <a href="/applications/urban-stormwater/">Urban Stormwater</a>
+      <a href="/applications/watersheds/">Watersheds</a>
+      <a href="/applications/estuaries/">Estuaries &amp; Tidal Rivers</a>
+      <a href="/applications/coasts/">Coasts &amp; Shorelines</a>
+      <a href="/applications/flood-risk/">Flood Risk &amp; Resilience</a>
+      <a href="/applications/data-models/">Data, Models &amp; AI</a>
+    </div>
+
+    <div class="pill-row">
+      <span class="pill">Sponge City (China)</span>
+      <span class="pill">Low-Impact Development (LID)</span>
+      <span class="pill">Green–blue networks</span>
+      <span class="pill">Urban retrofits</span>
+      <span class="pill">Climate &amp; equity</span>
+    </div>
+  </section>
+
+  <section class="section two-col">
+    <div>
+      <h2>From Concept to Framework</h2>
+      <p>
+        Sponge City and Low-Impact Development share a simple core idea:
+        manage rainfall where it falls, and use distributed measures to reduce
+        runoff, improve water quality, and enhance urban environments. They
+        typically emphasize:
+      </p>
+      <ul>
+        <li>Rainwater capture, infiltration, and reuse;</li>
+        <li>Green spaces, permeable surfaces, and open water;</li>
+        <li>Decentralized practices distributed across districts;</li>
+        <li>Multi-functional landscapes that serve people and ecosystems.</li>
+      </ul>
+      <p>
+        The GGBS Framework places these concepts within a broader picture that
+        includes grey backbone systems, receiving waters, and smart tools for
+        planning and operation.
+      </p>
+    </div>
+
+    <div>
+      <h2>GGBS View of Sponge City / LID</h2>
+      <p>
+        Within GGBS:
+      </p>
+      <ul>
+        <li><strong>Green</strong> practices (GI, vegetation, soils) are at the core of sponge concepts;</li>
+        <li><strong>Grey</strong> systems (pipes, tunnels, pumps) remain necessary for safety and reliability;</li>
+        <li><strong>Blue</strong> elements (rivers, lakes, wetlands, ponds) become visible and functional parts of the city;</li>
+        <li><strong>Smart</strong> tools help target, size, and operate these elements as a coordinated portfolio.</li>
+      </ul>
+      <div class="note-box">
+        Sponge City and LID are not separate from GGBS; they are specific ways
+        of applying the GGBS philosophy in urban districts.
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Typical Measures in Sponge City / LID</h2>
+
+    <div class="mini-card">
+      <strong>Green roofs and rooftop harvesting</strong>
+      Retaining and slowing rainfall at the building scale; providing thermal
+      and amenity benefits.
+    </div>
+
+    <div class="mini-card">
+      <strong>Bioretention, rain gardens, and sunken green spaces</strong>
+      Capturing runoff from roofs, streets, and courtyards with engineered
+      soils and vegetation.
+    </div>
+
+    <div class="mini-card">
+      <strong>Permeable pavements</strong>
+      Reducing effective imperviousness in parking areas, plazas, and low-speed
+      streets.
+    </div>
+
+    <div class="mini-card">
+      <strong>Greenways and blue–green corridors</strong>
+      Linking parks, wetlands, and channels to convey water, provide habitat,
+      and create recreational routes.
+    </div>
+
+    <div class="mini-card">
+      <strong>Urban lakes, ponds, and wetlands</strong>
+      Providing storage, treatment, and amenity at neighborhood or city scale.
+    </div>
+  </section>
+
+  <section class="section two-col">
+    <div>
+      <h2>Planning and Design at Multiple Scales</h2>
+      <p>
+        Successful Sponge City / LID programs typically plan across several
+        scales:
+      </p>
+      <ul>
+        <li><strong>Site scale</strong> – buildings, courtyards, blocks;</li>
+        <li><strong>Neighborhood scale</strong> – streets, parks, local lakes or ponds;</li>
+        <li><strong>District or city scale</strong> – integrated green–blue networks and major receiving waters;</li>
+        <li><strong>Watershed scale</strong> – connections to upstream and downstream rivers and reservoirs.</li>
+      </ul>
+      <p>
+        GGBS provides a language to connect decisions at each of these scales.
+      </p>
+    </div>
+
+    <div>
+      <h2>Role of Policy, Standards, and Equity</h2>
+      <p>
+        Implementation depends on more than technical design. Key enablers
+        include:
+      </p>
+      <ul>
+        <li>Regulatory targets for runoff control and water quality;</li>
+        <li>Design standards and manuals for GI and nature-based solutions;</li>
+        <li>Financing mechanisms and incentives for public and private sites;</li>
+        <li>Maintenance plans and institutional responsibilities;</li>
+        <li>Attention to equity so that benefits reach vulnerable communities.</li>
+      </ul>
+      <p>
+        Sponge City / LID programs can be powerful tools for improving both
+        flood resilience and everyday quality of life.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Global Perspectives and Case Studies</h2>
+    <p>
+      Although the term “Sponge City” is closely associated with China and
+      “Low-Impact Development” with North America, similar ideas appear
+      worldwide under different names (Water Sensitive Urban Design, Nature-Based
+      Solutions, etc.).
+    </p>
+    <p>
+      Within the GGBS Framework, future updates to this page can highlight
+      specific case studies, for example:
+    </p>
+    <ul>
+      <li>Chinese Sponge City pilot districts and their performance;</li>
+      <li>North American LID and green infrastructure programs;</li>
+      <li>Neighborhood-scale retrofits in older urban cores;</li>
+      <li>Integrated GI–blue–grey plans in rapidly urbanizing watersheds.</li>
+    </ul>
+    <p>
+      These examples can illustrate how GGBS helps compare, synthesize, and
+      transfer lessons across regions and planning cultures.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Connections to Other GGBS Applications</h2>
+    <p>
+      Sponge City / LID is closely linked with:
+    </p>
+    <ul>
+      <li>
+        <a href="/applications/urban-stormwater/">Urban Stormwater</a> –
+        detailed hydrologic and hydraulic performance at site and neighborhood
+        scales.
+      </li>
+      <li>
+        <a href="/applications/watersheds/">Watersheds</a> – cumulative
+        effects on peak flows, baseflows, and water quality.
+      </li>
+      <li>
+        <a href="/applications/flood-risk/">Flood Risk &amp; Resilience</a> –
+        distributed measures that complement structural protection.
+      </li>
+      <li>
+        <a href="/applications/data-models/">Data, Models &amp; AI</a> –
+        tools to plan, optimize, and track large portfolios of GI and
+        nature-based projects.
+      </li>
+    </ul>
+    <p>
+      In this sense, Sponge City and LID are practical expressions of the GGBS
+      idea: using Green, Grey, Blue, and Smart elements together to build more
+      resilient, livable cities.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>© 2025 GGBS – Green–Grey–Blue–Smart Infrastructure Framework</div>
+    <div>Hosted on GitHub Pages</div>
+  </div>
+</footer>
+
+</body>
+</html>
