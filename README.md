@@ -1,2 +1,2 @@
 # GGBS-website 
-NOT deployed, it is directed to GGBI instead.
+GGBS is not deployed and is directed to GGBI instead.
